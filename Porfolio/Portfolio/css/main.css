@@ -1,0 +1,193 @@
+:root {
+    --background-color: rgb(255, 250, 238);
+    --border-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, a, p {
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    }   
+
+    .nav-section {
+    padding: 1rem 2rem;
+    display: flex;
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center; 
+    }
+
+    .nav-logo {
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+    
+    .nav-section {
+        gap: 6rem;
+    }
+
+    .nav-1, .nav-2, .nav-3 {
+        flex-basis: calc(100%/3);
+    }
+
+    .link-text {
+        color: black; 
+    }
+
+    .contact-text {
+        color: black;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+    }
+
+    .article {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: transform 400ms ease;
+    }
+
+    .article[data-status="inactive"] {
+        transform: translateX(-100%);
+        transition: none;
+    }
+
+    .article[data-status="active"] {
+        transition-delay: 50ms;
+    }
+    
+    .article[data-status="after"] {
+    transform: translateX(-100%);
+    }
+    
+    .article[data-status="before"] {
+    transform: translateX(100%);
+    }
+    
+    .article[data-status="active-from-left"] {
+    transform: translateX(-100%);
+    transition: none;
+    }
+    
+    .article[data-status="active-from-right"] {
+    transform: translateX(100%);
+    transition: none;
+    }
+      
+    
+    .article-description-section,
+    .article-nav-section {
+        border-left: 1px solid var(--border-color);
+    }
+
+    .article-title-section,
+    .article-nav-section {
+        border-top: 1px solid var(--border-color);
+    }
+
+        .article-image {
+            max-width: 100%;
+        }
+
+        .description-text-section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            }
+
+            .description-text {
+                max-width: 80%;
+                margin: 0;
+                padding-top: 3rem;
+        }
+
+        .article-title-section {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            }
+
+            .title-text {
+                padding-left: 2rem;
+                font-size: 2rem;
+                width: 60%;
+        } 
+
+        .article-nav-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            }
+
+        .button-section {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            }
+
+        .button-section:hover {
+            
+            }
+
+        .nav-section-arrow {
+            width: 100%;
+            }
+
+        .button-section > button, .button-section > button {
+            border-width: 0;
+            background-color: var(--background-color);
+}
+
+@media only screen and (max-width: 800px) {
+    article {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
+
+.fa-classic, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fal, .far, .fas, .fat {
+    font-family: "Font Awesome 6 Pro";
+}
+
+.fa-arrow-right {
+    font-weight: 900;
+}
+
+button {
+    background-color: var(--background-color);
+    border: 0;
+}
